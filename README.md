@@ -13,5 +13,4 @@ Script provides support of basic linux command such as
 Script Doesn't provide support for **Changing directory (cd)**, **Pipes**, **Redirection** etc.
 
 ## Resources
-### Book to read
 ["Advanced Programming in the UNIX Environment"](https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739)
