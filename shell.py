@@ -1,4 +1,5 @@
 import os
+from signal import SIGKILL
 
 DEBUG = False
 
@@ -34,14 +35,17 @@ def main():
                 program = command[0]
                 arguments = command[1:]
 
-                if DEBUG: print(f"LOG: Executing {program} {arguments} in child process")
+                if DEBUG: print(f"LOG: Executing '{program} {''.join(arguments)}' in child process")
 
                 try:
                     # Execute command in shell
                     os.execlp(program, program, *arguments)
                 except OSError:
-                    raise(f"Exec error for {command}")
-
+                    child_pid = os.getpid()
+                    print(f"We may not support '{cmd[0]}' or you have used command incorrectly.")
+                    if DEBUG: print(f"Killing pid {child_pid}")
+                    os.kill(child_pid, SIGKILL)
+                    
             else: # parent process
                 # Wait for command execution to be completed
                 if DEBUG: print(f"LOG: Wating for child with pid {pid} to be completed")
