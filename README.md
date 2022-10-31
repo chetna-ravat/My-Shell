@@ -24,5 +24,10 @@ $ python3 shell.py -v
 ```
 In this mode more information will be displayed on the screen.
 
+## DEMO
+
+https://user-images.githubusercontent.com/61097652/198910148-d5d352b7-f581-425c-a0a6-e3948ef5ec0b.mp4
+
+
 ## Resources
 ["Advanced Programming in the UNIX Environment"](https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739)
