@@ -9,9 +9,6 @@ Script provides support of basic linux command such as
 - cat <file>
 - touch <file>
 
-
-Script doesn't provide support for **Changing directory (cd)**, **Pipes**, **Redirection** etc.
-
 ## How to run project
 ### Running project in normal mode
 ```shell
